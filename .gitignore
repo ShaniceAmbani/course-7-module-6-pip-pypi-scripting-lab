@@ -1,0 +1,3 @@
+venv/
+log_*.txt
+__pycache__/
