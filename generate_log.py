@@ -1,13 +1,15 @@
 from datetime import datetime
 import requests
 
+
 def fetch_data():
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
     if response.status_code == 200:
         return response.json()
     return {}
 
-if __name__ == "__main__":
+
+def generate_log():
     post = fetch_data()
 
     log_data = [
@@ -24,3 +26,8 @@ if __name__ == "__main__":
             file.write(entry + "\n")
 
     print(f"Log written to {filename}")
+    return filename
+
+
+if __name__ == "__main__":
+    generate_log()
