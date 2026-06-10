@@ -1,3 +1,5 @@
 venv/
 log_*.txt
 __pycache__/
+Pipfile
+Pipfile.lock
